@@ -4,9 +4,10 @@ FROM jekyll/jekyll:latest
 RUN npm install -g bower
 
 WORKDIR /app
-RUN git clone https://github.com/koalalorenzo/blog.setale.me.git .
+# RUN git clone https://github.com/koalalorenzo/blog.setale.me.git .
+ADD . /app
 RUN bower i --allow-root
-RUN mkdir /output
+RUN mkdir /output; chmod 777 /output
 RUN jekyll build --destination /output/
 
 EXPOSE 4000
