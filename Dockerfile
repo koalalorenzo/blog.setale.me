@@ -10,5 +10,5 @@ RUN bower i --allow-root
 RUN mkdir /output; chmod 777 /output
 RUN jekyll build --destination /output/
 
-EXPOSE 4000
-CMD jekyll serve --destination /output/
+# EXPOSE 4000
+CMD bower i --allow-root; jekyll build --destination /output/
