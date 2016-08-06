@@ -1,0 +1,24 @@
+{
+  "name": "blog.setale.me",
+  "authors": [
+    "Lorenzo Setale <lorenzo.setale@me.com>"
+  ],
+  "description": "My personal blog",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "http://blog.setale.me/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "animate.css": "^3.5.1",
+    "font-awesome": "^4.5.0"
+  }
+}

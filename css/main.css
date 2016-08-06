@@ -1,0 +1,35 @@
+html, body {
+	margin: 0 auto;
+	padding: 0;
+	margin-bottom: 25px;
+	color: #2e3436;
+	background-color: #eeeeec;
+  font-size: 16px;
+}
+
+.content-header {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+header.site {
+	min-height: 260px;
+}
+
+footer {
+	margin-top: 50px;
+	margin-bottom: 75px;
+	text-align: center;
+	color: #babdb6;
+}
+
+article img {
+  width: 80%;
+  margin: 15px 0px 0px 10%;
+	display: flex;
+}
+
+blockquote {
+	border-left: 5px solid #aaa;
+}

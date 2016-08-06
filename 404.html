@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div>
+  <h1>Ooops!</h1>
+  <p class="lead">
+    Something is missing here! Oops!<br>
+  </p>
+  <p>
+    If you are looking for an old post, you can reach it in the
+    <a id="oldPostUrl" href="http://koalalorenzo2014.wordpress.com" target="_blank">archived 2013 blog</a>.<br>
+    Courious about why I moved all the old blog posts? <a href="{{ site.baseurl | prepend: site.url }}{% post_url 2016-04-09-jekyll-time %}">Check it out here</a>!
+    <br>
+    <br>
+  </p>
+  <p class="center">
+    Now, we should focus about the important things<br>
+    <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"></a>
+  </p>
+</div>
+
+<script src="{{ site.url }}{{ site.baseurl }}/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    $("a#oldPostUrl").attr("href", "http://koalalorenzo2014.wordpress.com"+window.location.pathname);
+  })();
+</script>

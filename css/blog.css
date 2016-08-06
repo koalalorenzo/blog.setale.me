@@ -1,0 +1,52 @@
+article {
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+blockquote {
+  padding: 5px 15px;
+}
+
+blockquote p {
+  padding: 5px 15px;
+  margin: 0px !important;
+}
+
+article.short {
+  margin: 0.3rem 0px 4rem 0px;
+}
+
+.image-wrapper {
+  text-align: center;
+
+}
+
+.image-wrapper .image-caption {
+  margin-top: 0.333em;
+}
+
+article.full p {
+  margin: 2rem 0px;
+}
+
+.post-meta {
+  font-size: 0.8rem;
+}
+
+@media all and (min-width: 1100px) {
+  article.full h1.post-title {
+    position: absolute;
+    clear: both;
+    width: 1000px;
+    top: 0px;
+    left: 50%;
+    margin-left: -500px;
+    text-align: center;
+    font-size: 2.3rem;
+  }
+  article.full .post-meta:first-of-type {
+    margin-top: 7rem;
+    text-align: center;
+  }
+
+}

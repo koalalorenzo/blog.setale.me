@@ -1,0 +1,47 @@
+header.site img {
+	border-radius: 100%;
+	max-width: 125px;
+	max-height: 125px;
+	min-height: 50px;
+	min-width: 50px;
+}
+
+header.site {
+	padding-top: 25px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+header.site h1 {
+	font-size: 22px;
+}
+
+header.site a {
+	text-decoration: none;
+}
+
+header.site a:hover {
+	text-decoration: none;
+}
+
+header.site ul {
+	padding: 0px;
+	margin: 5px;
+}
+
+header.site ul li {
+	display: inline;
+	padding: 5px 10px;
+	font-size: 18px;
+}
+
+header.site ul li:first-child {
+	border-left: 0px;
+	padding-left: 0px;
+}
+
+header.site p {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 18px
+}

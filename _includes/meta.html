@@ -1,0 +1,29 @@
+<div class="post-meta">
+  <i class="fa fa-calendar"></i> <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+    {{ page.date | date: "%b %-d, %Y" }}
+  </time>
+  {% if page.author %} •
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <i class="fa fa-user"></i> <span itemprop="name">{{ page.author }}</span>
+      <meta itemprop="url" content="http://who.is.lorenzo.setale.me/?"/>
+    </span>
+  {% endif %} •
+  <i class="fa fa-link"></i> <a href="{{ page.url | prepend: site.baseurl | prepend: site.realurl }}" itemprop="url">permalink</a>
+  <br>
+  <span class="categories">
+    <i class="fa fa-sitemap"></i>
+    {% assign cats = page.categories | sort %}
+    {% for cat in cats | order: descending %}
+      {{ cat }}{% if forloop.last != true %}, {% endif %}
+    {% endfor %}
+  </span> •
+
+  <span class="tags">
+    <i class="fa fa-tags"></i>
+    {% assign taglist = page.tags | sort %}
+    {% for tag in taglist | order: descending %}
+      {{ tag }}{% if forloop.last != true %}, {% endif %}
+    {% endfor %}
+  </span>
+  <meta itemprop="keywords" content="{% for tag in taglist %}{{ tag }},{% endfor %}{% for cat in cats %}{{ cat }}{% if forloop.last != true %},{% endif %}{% endfor %}"/>
+</div>
