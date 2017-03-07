@@ -7,7 +7,7 @@ WORKDIR /srv/jekyll
 # RUN git clone https://github.com/koalalorenzo/blog.setale.me.git .
 ADD . /srv/jekyll
 RUN bower i --allow-root
-RUN jekyll build --destination /srv/jekyll/_site
+RUN jekyll build
 
 EXPOSE 80
-CMD bower i --allow-root; http-server /srv/jekyll/_site -p 80 -d false
+CMD jekyll build ; http-server /srv/jekyll/_site -p 80 -d false
