@@ -1,14 +1,13 @@
 FROM jekyll/jekyll:latest
 
-# Install bower 
+# Install bower
 RUN npm install -g bower http-server
 
-WORKDIR /app
+WORKDIR /srv/jekyll
 # RUN git clone https://github.com/koalalorenzo/blog.setale.me.git .
-ADD . /app
+ADD . /srv/jekyll
 RUN bower i --allow-root
-RUN mkdir /output; chmod 777 /output
-RUN jekyll build --destination /output/
+RUN jekyll build --destination /srv/jekyll/_site
 
 EXPOSE 80
-CMD bower i --allow-root; http-server /output/ -p 80 -d false
+CMD bower i --allow-root; http-server /srv/jekyll/_site -p 80 -d false
