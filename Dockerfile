@@ -10,4 +10,5 @@ RUN bower i --allow-root
 RUN jekyll build
 
 EXPOSE 80
+
 CMD jekyll build ; http-server /srv/jekyll/_site -p 80 -d false
