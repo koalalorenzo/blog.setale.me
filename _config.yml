@@ -10,7 +10,7 @@ title: "Lorenzo's Blog"
 description: "" # write a nice description for your blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site http://www.example.com
-realurl: "https://blog.setale.me" # Used for canonical and perma links
+realurl: "http://blog.setale.me" # Used for canonical and perma links
 google_analytics: 'UA-10395528-15'
 twitter_username: 'koalalorenzo'
 
