@@ -8,9 +8,15 @@ layout: default
   <div class="main-content" itemprop="articleBody">
     <header class="post-header">
 
+      {% if post.layout == "link" %}
+      <a class="post-link" href="{{ post.link }}">
+        <h2 class="post-title" itemprop="name headline">{{ post.title }}</h2>
+      </a>
+      {% else %}
       <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.realurl }}">
         <h2 class="post-title" itemprop="name headline">{{ post.title }}</h2>
       </a>
+      {% endif %}
 
       <div class="post-meta">
         <i class="fa fa-calendar"></i> <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -22,7 +28,13 @@ layout: default
             <meta itemprop="url" content="http://who.is.lorenzo.setale.me/?"/>
           </span>
         {% endif %} •
-        <i class="fa fa-link"></i> <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" itemprop="url">permalink</a>
+
+        {% if post.layout == "link" %}
+          <i class="fa fa-link"></i> <a href="{{ post.link }}" itemprop="url">permalink</a>
+        {% else %}
+          <i class="fa fa-link"></i> <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" itemprop="url">permalink</a>
+        {% endif %}
+
       </div>
     </header>
 

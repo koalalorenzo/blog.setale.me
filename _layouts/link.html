@@ -1,0 +1,21 @@
+---
+layout: link
+---
+<article class="post full">
+
+  <header class="post-header">
+    <a href="{{ page.link }}">
+      <h1 class="post-title">{{ page.title }}</h1>
+    </a>
+  </header>
+
+  <div class="post-content">
+    This post is a link to: <a href="{{ page.link }}">{{ page.link }}</a>
+    Redirecting you there in 3 seconds!
+    <script>
+      setTimeout(function(){window.location = "{{ page.link }}";}, 3*1000);
+    </script>
+    {{ content }}
+  </div>
+
+</article>
