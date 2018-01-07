@@ -2,7 +2,7 @@
 layout: post
 author: koalalorenzo
 comments: true
-date: 2016-09-03 14:10:01+02:00
+date: 2018-01-06 16:15:30+02:00
 title: "Go tests, multistage docker builds, pipeline"
 categories:
 - Thoughts
