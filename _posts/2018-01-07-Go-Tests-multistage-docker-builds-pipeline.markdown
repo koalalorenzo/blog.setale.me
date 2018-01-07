@@ -177,4 +177,5 @@ attack, right?* Anyway, I have noticed the following things happening:
 * You still need to run tests locally before pushing commits and PR!
 * More scripting is required to improve this with multiple packages
 
-Leave a comment if this is helpful or if you have a feedback.
+Feel free to leave a comment or share this post if you found it helpful! I am
+open for feedback!
