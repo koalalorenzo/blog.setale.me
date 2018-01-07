@@ -26,7 +26,7 @@ As I have not  found anything online, I want to remember and share it: I am
 testing my go packages with a multistage docker build inside my pipeline on
 GitLab.
 
-## The odd way of testing go docker container
+## The odd way of testing go docker containers
 Especially when implementing CI best practices, I have seen projects running
 tests in different ways:
 
@@ -41,7 +41,7 @@ that thing called “micro services”?*
 
 The lazy inner developer hidden in me, is always trying to run all the tests
 when building the containers... and the other lazy one instead, decides to add
-binaries together with the source code, so that the container can be tested
+binaries together with the source code, so that this container can be tested
 during a second task of our pipeline... but no, this is not optimal.
 
 Adding the vendor directory, the source code and all the tests into your
@@ -67,8 +67,8 @@ unit tests and integration tests by [using build tags](https://stackoverflow.com
 ## Multistage magic
 Well,  once you have your tests compiled you can run them in different steps in
 a docker container.  (remember about integration and unit tests?)  🧐  Since we
-don’t need anymore the source code we will use a multistage dockerfile. Let me
-show you my *amazing* Docker file:
+don’t need anymore the source code we will use [multistage builds](https://docs.docker.com/engine/userguide/eng-image/multistage-build/).
+Let me show you my *amazing* Docker file:
 
 ```
 FROM go:alpine as builder
@@ -85,7 +85,7 @@ COPY /out/ /out/ —-from=builder
 CMD [“/out/runme”]
 ```
 
-We are using a multistage dockerfile. It means is that it is building the
+We are using multistage builds. It means is that it is building the
 container in two stages. Briefly this is what is happening:
 
 * Sets  `go:alpine` as `builder` container
@@ -105,13 +105,13 @@ docker container.
 compare it with the previous one ...
 
 *If your heart is accelerating... it is normal, you might be excited...*
-*but get checked just in case, I am not a doctor.*
+*but get checked just in case, I am not a doctor and you are not a developer.*
 *Hopefully it is extreme COD over container sizes and not an heart attack*
 
-## Working with a pipeline
 Ok, now we got it. We have a container! It is much smaller, it doesn’t include
-unnecessary stuff like source code or dependencies. Now how can I use it?
+unnecessary stuff like source code or dependencies.
 
+## Working with a pipeline
 Using this in a pipeline is the best example to understand the benefit of this
 approach. Let’s suppose that we have a dependency like MongoDB, Redis or other
 components... *whatever*! How do we run these tests in the pipeline?
