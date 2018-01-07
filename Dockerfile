@@ -1,14 +1,12 @@
-FROM jekyll/jekyll:latest
-
-# Install bower
-RUN npm install -g bower http-server
+FROM jekyll/jekyll:latest as builder
 
 WORKDIR /srv/jekyll
-# RUN git clone https://github.com/koalalorenzo/blog.setale.me.git .
-ADD . /srv/jekyll
-RUN bower i --allow-root
-RUN jekyll build
+RUN gem install jekyll-sitemap jekyll-paginate
 
+COPY . /srv/jekyll
+RUN jekyll build 
+RUN ls /srv/jekyll/
+
+FROM nginx:alpine as server
+COPY --from=builder /srv/jekyll/_site/ /usr/share/nginx/html
 EXPOSE 80
-
-CMD jekyll build ; http-server /srv/jekyll/_site -p 80 -d false
