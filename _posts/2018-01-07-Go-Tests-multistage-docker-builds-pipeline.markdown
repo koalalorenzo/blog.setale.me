@@ -7,6 +7,7 @@ title: "Go tests, multistage docker builds, pipeline"
 categories:
 - Thoughts
 - Work
+- How To
 tags:
 - coding
 - software development
