@@ -12,12 +12,11 @@ tags:
 - software development
 - develop
 - golang
+- go
 - GitLab
 - testing
 - docker
 ---
-
-# Go Tests, multistage docker builds, pipeline
 During my development of [Siderus](https://siderus.io/) during the last year, I have learned how important it is to build, test and deploy using always the same docker container as well as reducing its size. As I have not  found anything online, I want to remember and share it: I am testing my go packages with a multistage docker build inside my pipeline on GitLab.
 
 ## The odd way of testing go docker container
