@@ -65,7 +65,7 @@ ensure granularity over your tests. It is also possible to split the code with
 unit tests and integration tests by [using build tags](https://stackoverflow.com/questions/25965584/separating-unit-tests-and-integration-tests-in-go).
 
 ## Multistage magic
-Well,  once you have your tests compiled you can run them in different steps in
+Well, once you have your tests compiled you can run them in different steps in
 a docker container.  (remember about integration and unit tests?)  🧐  Since we
 don’t need anymore the source code we will use [multistage builds](https://docs.docker.com/engine/userguide/eng-image/multistage-build/).
 Let me show you my *amazing* Docker file:
@@ -97,12 +97,12 @@ container in two stages. Briefly this is what is happening:
 * Copies only the binaries from the `build` containers
 * Set the binary as CMD
 
-As  multiple packages under the same repo *is apparently a thing*, I may suggest
-to write some helpful scripts, and reduce the lines/commits/layers inside the
-docker container.
+As multiple packages under the same repo *is apparently a thing*, I may
+suggest to write some helpful scripts, and reduce the lines/commits/layers
+inside the docker container.
 
 **Home Work for the Reader**: Check the size of the new docker container and
-compare it with the previous one ...
+compare it with the previous one...
 
 *If your heart is accelerating... it is normal, you might be excited...*
 *but get checked just in case, I am not a doctor and you are not a developer.*
@@ -161,7 +161,7 @@ What is happening:
 
 During the building phase, we are pushing a new docker container to the free
 gitlab private docker registry. This container has the binary file and the
-testing binaries. So the Testing stages are just running these binaries.  I
+testing binaries. So the Testing stages are just running these binaries. I
 strongly suggest to write a simple script to add inside the container that will
 run all the testing binaries.
 
