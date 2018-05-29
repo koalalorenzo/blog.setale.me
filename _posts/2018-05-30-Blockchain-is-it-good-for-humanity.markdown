@@ -39,9 +39,9 @@ transactions contains data that can’t be changed, and therefore it will raise 
 question. What if I publish something and later on I will regret? In most of the
 cases this is related to financial decisions and especially for Ethereum, it may
 be related to some IPFS hashes getting published or some Smart Contract events 
-or a dApp registration to get some free kitties. This means that if you agree 
-on publishing any personal data there, you are sure it will stay there 
-forever... 
+or a dApp registration to get some free [kitties](https://www.cryptokitties.co). 
+This means that if you agree  on publishing any personal data there, you are 
+sure it will stay there forever... 
 
 Have you posted something on facebook that you are now regretting? That doesn’t 
 exclude the fact that in first place the user should be more responsible for the
@@ -50,11 +50,11 @@ all the information and use the right to be forgotten...
 
 But when using a decentralized service like bitcoin you have a technical limit: 
 you can’t ask the nodes to forget an old transaction containing some of your 
-data or the hash of that content. Why? It is technically impossible to do so. 
-This is an important feature to validate future data. If somebody says to you 
-that they have a “blockchain” where data can be deleted, probably it is a fake 
-blockchain. That is why a simple white paper with no technical details about 
-how it works may be just a PR stunt. Document yourself before using any 
+data or the hash of that content. _Why?_ It is *technically impossible* to do 
+so.  This is an important feature to validate future data. If somebody says to 
+you that they have a “blockchain” where data can be deleted, probably it is a 
+_fake blockchain_. That is why a simple white paper with no technical details 
+about how it works may be just a PR stunt. Document yourself before using any 
 technology! 
 
 Having said that, when there is an issue the Open Source communities joins 
