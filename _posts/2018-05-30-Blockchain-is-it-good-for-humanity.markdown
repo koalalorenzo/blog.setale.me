@@ -2,23 +2,17 @@
 layout: post
 author: koalalorenzo
 comments: true
-date: 2018-01-06 16:15:30+02:00
-title: "Go tests, multistage docker builds, pipeline"
+date: 2018-05-29 6:12:31+02:00
+title: "Blockchain: is it good for humanity?"
 categories:
 - Thoughts
 - Work
-- How To
 tags:
-- coding
-- software development
-- continuous integration
-- develop
-- GitLab
-- pipeline
-- testing
-- docker
-- golang
-- go
+- Siderus
+- IPFS
+- Ethereum
+- Blockchain
+- Hera
 ---
 The journey that I have decided to take with [Siderus](https://siderus.io/) 
 brought myself always in embarrassing moment on meetings **Hyped discussion** 
